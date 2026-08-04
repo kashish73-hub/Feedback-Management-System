@@ -210,7 +210,7 @@ router.get('/students', async (req, res) => {
              ORDER BY s.roll_number`
         );
         res.json({ success: true, students });
-    } catch (error) {
+    } catch(error) {
         res.status(500).json({ success: false, message: 'Could not fetch students.' });
     }
 });
