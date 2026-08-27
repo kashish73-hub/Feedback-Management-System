@@ -5,11 +5,9 @@
 // Only admins can access these routes (middleware check)
 // Key Concept: Aggregate SQL queries for analytics
 // ============================================
-
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
-
 // ── MIDDLEWARE: Check if admin is logged in ──
 function requireAdminLogin(req, res, next) {
     if (req.session.user && req.session.user.role === 'admin') {
